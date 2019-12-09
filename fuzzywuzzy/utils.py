@@ -62,9 +62,9 @@ def asciionly(s):
 
 
 def asciidammit(s):
-    if type(s) is str:
+    if isinstance(s, str):
         return asciionly(s)
-    elif type(s) is unicode:
+    elif isinstance(s, unicode):
         return asciionly(s.encode('ascii', 'ignore'))
     else:
         return asciidammit(unicode(s))
